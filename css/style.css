@@ -1,0 +1,337 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid red;
+}
+.section-space {
+    padding: 40px 0;
+}
+.upper-navbar {
+    background-color: rgba(0,163,200,255);
+}
+.upper-navbar i{
+    color: white;
+    padding: 4px;
+  
+}
+.upper-navbar .navbar-brand {
+    font-size: large;
+    margin: 0;
+}
+.upper-navbar .social-icons i  {
+    font-size: 20px;
+    color: white;
+    padding: 8px;
+}
+.upper-navbar .social-icons .btn {
+    background-color: rgba(86,99,193,255);
+    padding: 12px;
+}
+
+.lower-navbar-wrapper .nav-link {
+    font-size: small;
+    font-weight: bold;
+    
+}
+.lower-navbar-wrapper .nav-item {
+    padding:0 3px;
+   font-size: 1rem;
+    border-radius: 30px;
+
+   
+}
+.lower-navbar-wrapper .nav-item:hover {
+   
+    background-color:rgba(86,99,193,255) ;
+ 
+}
+.lower-navbar-wrapper .psudo h4::after {
+    content: '';
+    width: 60px;
+    height: 5px;
+    background-color:rgba(198,228,234,255);
+    display: block;
+}
+.lower-navbar-icons i {
+    font-size:large;
+    color:gray;
+    padding: 8px;
+}
+
+.main-carosuel-wrapper .carousel-item{
+    width: 100%;
+    height: 600px;
+}
+
+.main-carosuel-wrapper .carousel-caption h1 {
+    background-color: rgba(0,163,200,255);
+    display: inline-block;
+    color: white;
+    font-size:80px;
+    font-weight: bolder;
+  
+}
+.main-carosuel-wrapper .carousel-caption h2 {
+background-color: rgba(64,113,142,255);
+display: inline-block;
+color: white;
+font-size:40px;
+margin-top: 8px;
+
+}
+.main-carosuel-wrapper .carousel-caption p {
+    color: white;
+    font-size: larger;
+   
+}
+
+.main-carosuel-wrapper .carousel-caption .btn{
+    padding: 23px 67px;
+    border-radius: 156px;
+    font-size: larger;
+}
+.lead-text {
+    text-align: center;
+}
+.lead-text h2 {
+    font-size:40px ;
+    font-weight: bolder;
+}
+.lead-text img {
+   width: 80px;
+   height: 50px;
+}
+.description-info .card {
+    background-color:rgba(0,163,200,255);
+    line-height: 28px;
+    border: none;
+    border-radius: 0;
+}
+.description-info .card img {
+    width: 50px;
+    height: 50px;
+    align-items: center;
+}
+.description-info .card .btn {
+    padding: 8px 32px;
+}
+.medi-cards-wrapper .card{
+    border: none;
+    border-radius: 0;
+}
+.medi-cards-wrapper .card .ambulance {
+    color: white;
+    width: 75px;
+    height: 60px;
+    background-color:rgba(0,163,200,255);
+    border: 4px solid white;
+    padding: 8px;
+    border-radius: 8px;
+    position: absolute;
+    top: 42%;
+    left: 40px;
+
+}
+.emergancy-service-wrapper img {
+    width: 75px;
+    height: 60px;
+}
+.specialization-wrapper .nav-link i {
+    width: 140px;
+    height: 120px;
+    font-size: 100px;
+    color: rgba(169,169,169,255);
+    padding-top: 16px;
+    margin: 0 20px;
+
+}
+.specialization-wrapper .nav-link i:hover {
+color: rgba(86,99,193,255);
+}
+.specialization-wrapper .nav-link img {
+    width: 140px;
+    height: 120px;
+    font-size: 100px;
+    color: rgba(169,169,169,255);
+    padding-top: 16px;
+}
+.specialization-wrapper .nav-link img:hover {
+color: rgba(86,99,193,255);
+}
+
+.specialization-wrapper .check img {
+    width: 15px;
+    height: 15px;
+}
+.specialization-wrapper .bottom p {
+    margin:0;
+}
+
+.employee-info-wrapper i.fa {
+    padding: 12px;
+    border: 3px solid rgba(169,169,169,255);
+    border-radius:50% ;
+    background-color:rgba(0,163,200,255) ;
+    color: white;
+}
+.price-plan-card .card{
+    border: 0;
+    border-radius: 0;
+    overflow: hidden;
+}
+.price-plan-card img {
+    width: 140px !important;
+    padding-top: 80px;
+    align-self: center;
+    height: 150px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    background-color: rgba(230,230,230,255);
+
+}
+.price-plan-card .label {
+    
+    background-color: rgba(0,163,200,255);
+    position: absolute;
+    top: 43px;
+    transform: rotate(41deg);
+    padding: 5px 103px;
+    right: -50px;
+    font-size: small;
+}
+.facilitation-info-wrapper .facilitation {
+    background-color: rgba(0,163,200,255);
+    color:white;
+} 
+.facilitation-info-wrapper ul li  {
+padding:16px 0;
+}
+
+.facilitation-info-wrapper .form-control {
+  
+    font-size: 1rem;
+  
+    line-height: 3.5;
+}
+.facilitation-info-wrapper .form-btn .btn:hover{
+    color: black;
+}
+.patient-related-wrapper img {
+    width: 100%;
+    height: 250px;
+}
+.patient-related-wrapper a {
+      text-decoration: none;
+}
+.employee-intro-wrapper img {
+    width: 80px;
+    height: 80px;
+    border: 3px solid transparent; 
+    border-radius: 50%;
+}
+.employee-intro-wrapper a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+.emergancey-info-wrapper img {
+    width: 50px;
+    height: 50px;
+}
+.footer .navbar-brand img {
+   width: 40px;
+   height: 40px;
+}
+.footer .doctor img {
+    width: 80px;
+    height: 80px;
+    border: 3px solid transparent; 
+    border-radius: 50%;
+}
+.button-up-wrapper {
+    position: relative;
+}
+.button-up-wrapper a {
+    background-color: rgba(29,104,121,255);
+    width: 50px;
+    height: 50px;
+    position: fixed;
+   bottom: 24px;
+    right: 36px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    transform: translate(-50% -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 32px;
+}
+.button-up-wrapper a:hover {
+    background-color: rgba(29,104,121,255);
+}
+.sidebar-icons{
+    /* border: 1px solid black; */
+    position: relative;
+    /* border: 1px 1px 1px 0 solid black; */
+
+
+}
+.sidebar-icons .images {
+position: fixed;
+top: 50px;
+right: -220px;
+    border: 1px solid green;
+    border-radius: 8px;
+
+   
+}
+.sidebar-icons img {
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+   
+}
+.side-wrapper {
+  position: relative;
+}
+/* .side-wrapper .setting {
+    position: fixed;
+    left: 329px;
+    top: 150px;
+
+} */
+.side-wrapper .setting:hover {
+    background-color: rgba(8,11,11,255) 
+  
+
+}
+/* .side-wrapper .hidden {
+    position: fixed;
+    top: 0;
+    width: 101%;
+}
+   */
+.side-wrapper a img {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(25,25,25,255);
+    color: white;
+    padding: 20px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+
+}
+.side-wrapper .btn{
+    padding: 24px 26px;
+    border: 0;
+    border-radius: 0;
+  
+}
+.side-wrapper .small {
+    padding: 8px 10px;
+}
