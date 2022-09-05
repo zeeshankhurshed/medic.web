@@ -7,19 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <script src="js/test.js" ></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+ 
 </head>
 
 <body>
   <div class="section-site">
     <header class="header">
+       <div class="container">
       <nav class="navbar navbar-light upper-navbar">
-        <div class="container">
+       
           <div class="contact-info">
-            <a class="navbar-brand text-white"><i class="fa fa-phone" aria-hidden="true"></i>Tel:+440-98-5298</a>
+            <a class="navbar-brand text-white " style="margin-right: 8px;"><i class="fa fa-phone" aria-hidden="true"></i>Tel:+440-98-5298</a>
             <a class="navbar-brand text-white"
               style="border-left:1px solid white ; border-right:1px solid white; padding:0 16px; font-size: large;"><i
                 class="fa fa-envelope-o" aria-hidden="true"></i>info@example.com</a>
@@ -35,16 +37,15 @@
             <a href="#" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Make an
               Appointment</a>
           </div>
-        </div>
-      </nav>
+            </nav>
+          </div>
 
       <div class="lower-navbar-wrapper py-3">
         <nav class="navbar navbar-expand-lg navbar-light ">
           <div class="container">
             <a class="navbar-brand" href="#"><img src="img/logo.png" alt="" style="width:60px ;position: relative;"> <b
-                style="font-size:30px;position: absolute; top: 20px;  ">MEDINOVA</b> <br><span
-                style="font-weight:lighter; font-size:small; position: absolute;left: 272px; top: 48px; ">Bootstrap
-                5.X</a>
+                style="font-size:30px;position: absolute; top: 20px;">MEDINOVA</b> <br><span
+                style="font-weight:lighter; font-size:small; position: absolute;left: 272px; top: 48px; "></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
               aria-label="Toggle navigation">
@@ -57,10 +58,10 @@
 
               <div class="d-flex">
 
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle active"
-                      style="background-color:rgba(86,99,193,255) ;border-radius: 30px; " href="#" id="navbarDropdown"
+                    <a  class="nav-link dropdown-toggle active text-white"
+                      style="display:none; background-color:rgba(86,99,193,255) ;border-radius: 30px; " href="#" id="navbarDropdown"
                       role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Home
                     </a>
@@ -75,7 +76,7 @@
                   </li>
 
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                       data-bs-toggle="dropdown" aria-expanded="false">
                       Hot
                     </a>
@@ -170,14 +171,14 @@
                     <!-- Modal -->
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
                       tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog">
+                      <div class="modal-dialog" style="max-width:100% ; top:-30px;">
                         <div class="modal-content">
                           <div class="modal-header" style="border-bottom: 0;">
 
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                            <input type="text" class="form-control text-center" style="border: 0; font-size: xx-large;"
+                            <input type="text" class="form-control text-center pb-5" style="border: 0; font-size: xx-large;"
                               id="exampleFormControlInput1" placeholder="Type and press Enter...">
                           </div>
 
@@ -185,12 +186,37 @@
                       </div>
                     </div>
                   </li>
-
+                  <script>
+                       var toastTrigger = document.getElementById('liveToastBtn')
+                  var toastLiveExample = document.getElementById('liveToast')
+                  if (toastTrigger) {
+                    toastTrigger.addEventListener('click', function () {
+                      var toast = new bootstrap.Toast(toastLiveExample)
+                  
+                      toast.show()
+                    })
+                  }
+                  </script>
+               
 
                   <li class="nav-item " style="display:flex; justify-content: center; align-items:center;">
                     <div class="col-md-12" style="display:flex; justify-content: center; align-items:center;">
-                      <a href="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom"><i
-                          class="fa fa-shopping-cart text-muted" aria-hidden="true"> </i></a>
+                      <a href="" id="liveToastBtn" ><i class="fa fa-shopping-cart text-muted" aria-hidden="true"> </i></a>
+
+                          <!-- <button type="button" class="btn " id="liveToastBtn"><i class="fa fa-shopping-cart text-muted" aria-hidden="true"> </i></button> -->
+                          <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+                            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                              <div class="toast-header">
+                                <img src="..." class="rounded me-2" alt="...">
+                                <strong class="me-auto">Bootstrap</strong>
+                                <small>11 mins ago</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                              </div>
+                              <div class="toast-body">
+                                Hello, world! This is a toast message.
+                              </div>
+                            </div>
+                          </div>
 
                   </li>
 
@@ -323,12 +349,12 @@
       <div class="main-carosuel-wrapper">
         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active d-none d-md-block d-lg-block "
               aria-current="true" aria-label="Slide 1"
               style="height:20px; width: 20px; border-radius:50%; background-color: white; border:3px solid white;"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"  class=" d-none d-md-block d-lg-block" aria-label="Slide 2"
               style="height:20px; width: 20px; border-radius:50%; background-color: white; border:3px solid white;"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"  class=" d-none d-md-block d-lg-block" aria-label="Slide 3"
               style="height:20px; width: 20px; border-radius:50%; background-color: white; border:3px solid white;"></button>
           </div>
           <div class="carousel-inner">
@@ -368,20 +394,20 @@
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
             data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="carousel-control-prev-icon d-none d-md-block" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+          <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselExampleDark"
             data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="carousel-control-next-icon d-none d-md-block " aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
         </div>
       </div><!-- /.main-carosuel-wrapper -->
 
-      <div class="lead-text py-5 bg-light">
+      <div class="lead-text py-5 bg-light ">
         <div class="container">
-          <div class="row pt-5">
+          <div class="row pt-5 medinova">
             <div class="col-md-12">
               <h2 class="mb-0">Welcome to <span style="color:rgba(0,163,200,255);">Medinova</span> </h2>
               <img src="img/dna.png" alt="">
@@ -395,7 +421,7 @@
       <div class="description-info bg-light">
         <div class="container">
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-6 col-lg-3">
               <div class="card text-center pt-5 text-white">
                 <img src="img/emergency-ambulance.png" class="card-img-top m-auto " alt="...">
                 <div class="card-body pt-5">
@@ -406,7 +432,7 @@
                 </div>
               </div>
             </div><!-- /.col-md-3 -->
-            <div class="col-md-3">
+            <div class="col-md-6 col-lg-3">
               <div class="card text-center pt-5 text-white">
                 <img src="img/medical bed.png" class="card-img-top m-auto " alt="...">
                 <div class="card-body pt-5">
@@ -417,7 +443,7 @@
                 </div>
               </div>
             </div><!-- /.col-md-3 -->
-            <div class="col-md-3">
+            <div class="col-md-6 col-lg-3">
               <div class="card text-center pt-5 text-white">
                 <img src="img/stethoscope.png" class="card-img-top m-auto " alt="...">
                 <div class="card-body pt-5">
@@ -428,7 +454,7 @@
                 </div>
               </div>
             </div><!-- /.col-md-3 -->
-            <div class="col-md-3">
+            <div class="col-md-6 col-lg-3">
               <div class="card text-center pt-5 text-white">
                 <img src="img/drop.png" class="card-img-top m-auto " alt="...">
                 <div class="card-body pt-5">
@@ -460,8 +486,8 @@
 
       <div class="medi-cards-wrapper bg-light">
         <div class="container">
-          <div class="row">
-            <div class="col-md-4">
+          <div class="row sml">
+            <div class="col-md-6 col-lg-4">
               <div class="card  pb-3">
                 <img src="img/doctors vedio posters.png" class="card-img-top  " alt="...">
                 <div class="card-body pt-5">
@@ -469,12 +495,12 @@
                   <p class="card-text pb-3">Some quick example text to build on the card title and make up the bulk of
                     the card's content of the card's content of the card's.</p>
                   <a href="#" class="btn "><i class="fa fa-angle-double-right" aria-hidden="true"></i> Read More</a>
-                  <img src="img/ambulance.png" class="card-img-top ambulance" alt="...">
+                  <img src="img/ambulance.png" class="card-img-top ambulance d-none d-md-block" alt="...">
                 </div>
               </div>
             </div><!-- /.col-md-4 -->
 
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
               <div class="card  pb-3">
                 <img src="img/3.png" class="card-img-top  " alt="...">
                 <div class="card-body pt-5">
@@ -482,12 +508,12 @@
                   <p class="card-text pb-3">Some quick example text to build on the card title and make up the bulk of
                     the card's content of the card's content of the card's.</p>
                   <a href="#" class="btn "><i class="fa fa-angle-double-right" aria-hidden="true"></i> Read More</a>
-                  <img src="img/stethoscope (2).png" class="card-img-top ambulance" alt="...">
+                  <img src="img/stethoscope (2).png" class="card-img-top ambulance d-none d-md-block" alt="...">
                 </div>
               </div>
             </div><!-- /.col-md-4 -->
 
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
               <div class="card pb-3 ">
                 <img src="img/depositphotos_26631119-stock-photo-male-doctor-in-front-of.jpg" class="card-img-top  "
                   alt="...">
@@ -496,12 +522,12 @@
                   <p class="card-text pb-3">Some quick example text to build on the card title and make up the bulk of
                     the card's content of the card's content of the card's.</p>
                   <a href="#" class="btn "><i class="fa fa-angle-double-right" aria-hidden="true"></i> Read More</a>
-                  <img src="img/blood.png" class="card-img-top ambulance" alt="...">
+                  <img src="img/blood.png" class="card-img-top ambulance d-none d-md-block" alt="...">
                 </div>
               </div>
             </div><!-- /.col-md-4 -->
 
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
               <div class="card  ">
                 <img src="img/neuro card.png" class="card-img-top  " alt="...">
                 <div class="card-body pt-5">
@@ -509,12 +535,12 @@
                   <p class="card-text pb-3">Some quick example text to build on the card title and make up the bulk of
                     the card's content of the card's content of the card's.</p>
                   <a href="#" class="btn "><i class="fa fa-angle-double-right" aria-hidden="true"></i> Read More</a>
-                  <img src="img/patient.png" class="card-img-top ambulance" alt="...">
+                  <img src="img/patient.png" class="card-img-top ambulance d-none d-md-block" alt="...">
                 </div>
               </div>
             </div><!-- /.col-md-4 -->
 
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
               <div class="card  ">
                 <img src="img/Microscope.jpg" class="card-img-top  " alt="...">
                 <div class="card-body pt-5">
@@ -522,12 +548,12 @@
                   <p class="card-text pb-3">Some quick example text to build on the card title and make up the bulk of
                     the card's content of the card's content of the card's.</p>
                   <a href="#" class="btn "><i class="fa fa-angle-double-right" aria-hidden="true"></i> Read More</a>
-                  <img src="img/drug.png" class="card-img-top ambulance" alt="...">
+                  <img src="img/drug.png" class="card-img-top ambulance d-none d-md-block" alt="...">
                 </div>
               </div>
             </div><!-- /.col-md-4 -->
 
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
               <div class="card  ">
                 <img src="img/card.png" class="card-img-top  " alt="...">
                 <div class="card-body pt-5">
@@ -535,7 +561,7 @@
                   <p class="card-text pb-3">Some quick example text to build on the card title and make up the bulk of
                     the card's content of the card's content of the card's.</p>
                   <a href="#" class="btn "><i class="fa fa-angle-double-right" aria-hidden="true"></i> Read More</a>
-                  <img src="img/doctor.png" class="card-img-top ambulance" alt="...">
+                  <img src="img/doctor.png" class="card-img-top ambulance d-none d-md-block" alt="...">
                 </div>
               </div>
             </div><!-- /.col-md-4 -->
@@ -558,8 +584,8 @@
 
       <div class="emergancy-service-wrapper">
         <div class="container">
-          <div class="row">
-            <div class="col-md-4">
+          <div class="row sml">
+            <div class="col-md-6 col-lg-4 btm">
               <div class="row">
                 <div class="col-md-4 ">
                   <img src="img/first-aid-kit (2).png" alt="">
@@ -572,7 +598,7 @@
               </div><!-- /.row -->
             </div><!-- /.col-md-4 -->
 
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4 btm">
               <div class="row">
                 <div class="col-md-4 ">
                   <img src="img/dna (2).png" alt="">
@@ -585,7 +611,7 @@
               </div><!-- /.row -->
             </div><!-- /.col-md-4 -->
 
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4 ">
               <div class="row">
                 <div class="col-md-4 ">
                   <img src="img/hospital-bed.png" alt="">
@@ -598,7 +624,7 @@
               </div><!-- /.row -->
             </div><!-- /.col-md-4 -->
 
-            <div class="col-md-4 pt-5">
+            <div class="col-md-6 col-lg-4 pt-5 top">
               <div class="row">
                 <div class="col-md-4 ">
                   <img src="img/blood (2).png" alt="">
@@ -611,7 +637,7 @@
               </div><!-- /.row -->
             </div><!-- /.col-md-4 -->
 
-            <div class="col-md-4 pt-5">
+            <div class="col-md-6 col-lg-4 pt-5">
               <div class="row">
                 <div class="col-md-4 ">
                   <img src="img/aid-kit.png" alt="">
@@ -624,7 +650,7 @@
               </div><!-- /.row -->
             </div><!-- /.col-md-4 -->
 
-            <div class="col-md-4 pt-5">
+            <div class="col-md-6 col-lg-4 pt-5">
               <div class="row">
                 <div class="col-md-4 ">
                   <img src="img/capsule.png" alt="">
@@ -662,7 +688,7 @@
               <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
                 role="tab" aria-controls="home" aria-selected="true"><i class="fa fa-tint"
                   aria-hidden="true"></i></button>
-              <p class="text-center text-muted">Blood Test</p>
+              <p class="text-center text-muted" >Blood Test</p>
             </li>
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
@@ -695,7 +721,7 @@
                 <div class="col-md-5 ">
                   <img src="img/lab test blood.jpg" alt="">
                 </div><!-- /.col-md-5 -->
-                <div class="col-md-6">
+                <div class="col-md-12 col-lg-6 test">
                   <h5 class="pb-3">Blood Test</h5>
                   <p class="pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magni illo id aliquam
                     nam mollitia ullam illum facere, saepe animi similique accusantium laudantium eum, ratione quisquam.
@@ -786,7 +812,7 @@
                 <div class="col-md-5 ">
                   <img src="img/lab test blood.jpg" alt="">
                 </div><!-- /.col-md-5 -->
-                <div class="col-md-6">
+                <div class="col-md-12 col-lg-6 test">
                   <h5 class="pb-3">Urology</h5>
                   <p class="pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magni illo id aliquam
                     nam mollitia ullam illum facere, saepe animi similique accusantium laudantium eum, ratione quisquam.
@@ -876,7 +902,7 @@
                 <div class="col-md-5 ">
                   <img src="img/lab test blood.jpg" alt="">
                 </div><!-- /.col-md-5 -->
-                <div class="col-md-6">
+                <div class="col-md-12 col-lg-6 test">
                   <h5 class="pb-3">Dental</h5>
                   <p class="pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magni illo id aliquam
                     nam mollitia ullam illum facere, saepe animi similique accusantium laudantium eum, ratione quisquam.
@@ -966,7 +992,7 @@
                 <div class="col-md-5 ">
                   <img src="img/lab test blood.jpg" alt="">
                 </div><!-- /.col-md-5 -->
-                <div class="col-md-6">
+                <div class="col-md-12 col-lg-6 test">
                   <h5 class="pb-3">Neurology</h5>
                   <p class="pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magni illo id aliquam
                     nam mollitia ullam illum facere, saepe animi similique accusantium laudantium eum, ratione quisquam.
@@ -1056,7 +1082,7 @@
                 <div class="col-md-5 ">
                   <img src="img/lab test blood.jpg" alt="">
                 </div><!-- /.col-md-5 -->
-                <div class="col-md-6">
+                <div class="col-md-12 col-lg-6 test">
                   <h5 class="pb-3">Cardiology</h5>
                   <p class="pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magni illo id aliquam
                     nam mollitia ullam illum facere, saepe animi similique accusantium laudantium eum, ratione quisquam.
@@ -1163,10 +1189,10 @@
       <div class="employee-info-wrapper">
         <div class="container">
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-6 col-lg-3 btm">
               <div class="card" style="border: 0; border-radius:0;">
                 <img src="img/2.png" class="card-img-top" alt="...">
-                <div class="card-body">
+                <div class="card-body t-cnt">
                   <h5 class="card-title">Eliz Thoppar</h5>
                   <p class="text-muted">Neurologist</p>
                   <p> Monday - Friday <span style="padding-left:12px;">8.00 - 17.00</span></p>
@@ -1179,10 +1205,10 @@
               </div>
             </div><!-- /.col-md-3 -->
 
-            <div class="col-md-3">
+            <div class="col-md-6 col-lg-3 btm">
               <div class="card" style="border: 0; border-radius:0;">
                 <img src="img/2.png" class="card-img-top" alt="...">
-                <div class="card-body">
+                <div class="card-body t-cnt">
                   <h5 class="card-title">Eliz Thoppar</h5>
                   <p class="text-muted">Neurologist</p>
                   <p> Monday - Friday <span style="padding-left:12px;">8.00 - 17.00</span></p>
@@ -1195,10 +1221,10 @@
               </div>
             </div><!-- /.col-md-3 -->
 
-            <div class="col-md-3">
+            <div class="col-md-6 col-lg-3 sml">
               <div class="card" style="border: 0; border-radius:0;">
                 <img src="img/2.png" class="card-img-top" alt="...">
-                <div class="card-body">
+                <div class="card-body t-cnt">
                   <h5 class="card-title">Eliz Thoppar</h5>
                   <p class="text-muted">Neurologist</p>
                   <p> Monday - Friday <span style="padding-left:12px;">8.00 - 17.00</span></p>
@@ -1211,10 +1237,10 @@
               </div>
             </div><!-- /.col-md-3 -->
 
-            <div class="col-md-3">
+            <div class="col-md-6 col-lg-3">
               <div class="card" style="border: 0; border-radius:0;">
                 <img src="img/2.png" class="card-img-top" alt="...">
-                <div class="card-body">
+                <div class="card-body t-cnt">
                   <h5 class="card-title">Eliz Thoppar</h5>
                   <p class="text-muted">Neurologist</p>
                   <p> Monday - Friday <span style="padding-left:12px;">8.00 - 17.00</span></p>
@@ -1245,8 +1271,8 @@
 
       <div class="price-plan-card " style="background-color: rgba(232,232,232,255);">
         <div class="container">
-          <div class="row">
-            <div class="col-md-4">
+          <div class="row ">
+            <div class="col-md-4 btm">
               <div class="card text-center" style="border-radius: 20px; padding-top:60px;">
                 <img src="img/tooth.png" class="card-img-top py-5" alt="...">
                 <div class="card-body">
@@ -1266,7 +1292,7 @@
                 </div>
               </div>
             </div><!-- /.col-md-4 -->
-            <div class="col-md-4">
+            <div class="col-md-4 btm">
               <div class="card text-center" style="border-radius: 20px; padding-top:60px;">
                 <img src="img/blood.png" class="card-img-top py-5" alt="...">
                 <div class="card-body">
@@ -1319,10 +1345,10 @@
       <div class="facilitation-info-wrapper section-space">
 
         <div class="row pt-5">
-          <div class="col-md-4">
+          <div class="col-md-6 col-lg-4 d-none d-md-block d-none d-sm-block ">
             <img src="img/card 44.jpg" alt="">
           </div><!-- /.col-md-4 -->
-          <div class="col-md-4 pt-5 facilitation ">
+          <div class="col-md-6 col-lg-4 pt-5 facilitation ">
             <h3 style="margin-left: 60px;" class="pt-5">Our Facilities</h3>
             <ul style="margin-left: 50px;">
               <li><a href=""></a>Out Patient Rehablitaion</li>
@@ -1338,7 +1364,7 @@
               More</a>
           </div><!-- /.col-md-4 -->
 
-          <div class="col-md-4">
+          <div class="col-md-6 col-lg-4 form">
             <h3 class="pt-5" style="padding-left: 60px;">Reservation Form</h3>
             <div class="row g-3 pt-4">
               <div class="col-md-6">
@@ -1387,10 +1413,10 @@
       <div class="patient-related-wrapper pt-5">
         <div class="container">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 ">
               <div class="card  pb-3 bg-light " style="border:0;">
                 <img src="img/card 5.jpg" class="card-img-top  " alt="...">
-                <div class="card-body pt-5">
+                <div class="card-body pt-5 sml">
                   <h5 class="card-title">Captilized on low hanging fruit to identify a ball park test</h5>
                   <hr>
                   <a href=""><span><i class="fa fa-calendar pt-3" aria-hidden="true"></i> July 20, 2021 </span><span
@@ -1406,7 +1432,7 @@
             <div class="col-md-4">
               <div class="card  pb-3 bg-light " style="border:0;">
                 <img src="img/card 6.jpg" class="card-img-top  " alt="...">
-                <div class="card-body pt-5">
+                <div class="card-body pt-5 sml">
                   <h5 class="card-title">Captilized on low hanging fruit to identify a ball park test</h5>
                   <hr>
                   <a href=""><span><i class="fa fa-calendar pt-3" aria-hidden="true"></i> July 20, 2021 </span><span
@@ -1422,7 +1448,7 @@
             <div class="col-md-4">
               <div class="card  pb-3 bg-light " style="border:0;">
                 <img src="img/neuro card.png" class="card-img-top  " alt="...">
-                <div class="card-body pt-5">
+                <div class="card-body pt-5 sml">
                   <h5 class="card-title">Captilized on low hanging fruit to identify a ball park test</h5>
                   <hr>
                   <a href=""><span><i class="fa fa-calendar pt-3" aria-hidden="true"></i> July 20, 2021 </span><span
@@ -1441,8 +1467,8 @@
 
       <div class="employee-intro-wrapper section-space " style="background-color: rgba(236,236,236,255);">
         <div class="container">
-          <div class="row pt-5">
-            <div class="col-md-4">
+          <div class="row pt-5 ">
+            <div class="col-md-4 sml">
               <p class="bg-white"
                 style="border: 2px solid transparent; border-radius:8px; padding: 32px; font-style: italic;">Lorem ipsum
                 dolor sit amet consectetur adipisicing elit. Quos, voluptates voluptatibus. Rerum quibusdam iusto quam
@@ -1452,7 +1478,7 @@
                   style="font-weight:bold ;font-size:large; padding-top:0;">Mark Smith</span> <span class="text-muted"
                   style="position:absolute; top: 25px; right: 30px;">Employee </span></a>
             </div><!-- /.col-md-4 -->
-            <div class="col-md-4">
+            <div class="col-md-4 sml">
               <p class="bg-white"
                 style="border: 2px solid transparent; border-radius:8px; padding: 32px; font-style: italic;">Lorem ipsum
                 dolor sit amet consectetur adipisicing elit. Quos, voluptates voluptatibus. Rerum quibusdam iusto quam
@@ -1462,7 +1488,7 @@
                   style="font-weight:bold ;font-size:large; padding-top:0;">Mark Smith</span> <span class="text-muted"
                   style="position:absolute; top: 25px; right: 30px;">Employee </span></a>
             </div><!-- /.col-md-4 -->
-            <div class="col-md-4">
+            <div class="col-md-4 sml">
               <p class="bg-white"
                 style="border: 2px solid transparent; border-radius:8px; padding: 32px; font-style: italic;">Lorem ipsum
                 dolor sit amet consectetur adipisicing elit. Quos, voluptates voluptatibus. Rerum quibusdam iusto quam
@@ -1521,8 +1547,8 @@
 
     <footer class="footer" style="background-color: rgba(26,26,26,255);">
       <div class="container">
-        <div class="row py-5 section-space">
-          <div class="col-md-3 text-white">
+        <div class="row py-5 section-space scn">
+          <div class="col-md-6 col-lg-3 text-white sml">
             <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""> <span class="text-white">MEDINOVA</span>
             </a>
             <p class="pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, modi! Ut cumque reprehenderit magni, nulla</p>
@@ -1546,7 +1572,7 @@
             
           </div><!-- /.col-md-3 -->
 
-          <div class="col-md-3 text-white">
+          <div class="col-md-6 col-lg-3 text-white sml">
             <h4 class="text-white">Latest News</h4>
             <hr>
             <div class="row text-white doctor">
@@ -1579,7 +1605,7 @@
             </div><!-- /.row -->
           </div><!-- /.col-md-3 -->
 
-          <div class="col-md-3 text-white">
+          <div class="col-md-6 col-lg-3 text-white sml">
             <h4 class="text-white">Links</h4>
             <hr>
             <div class="row text-white ">
@@ -1636,7 +1662,7 @@
 
           </div>
 
-          <div class="col-md-3 text-white">
+          <div class="col-md-6 col-lg-3 text-white ">
             <h4 class="text-white">Opening Hours</h4>
             <hr>
             <p>Friday - Saturday: 10:00am - 6.00pm</p>
@@ -1650,9 +1676,9 @@
 
     </footer>
 
-    <div class="bottom-navbar py-3" style="background-color: rgba(42,42,42,255);">
+    <div class="bottom-navbar py-3 " style="background-color: rgba(42,42,42,255);">
       <div class="container">
-        <div class="row text-white m-auto" style="justify-content: space-between; ">
+        <div class="row text-white m-auto sml" style="justify-content: space-between; ">
           <div class="col-md-4" style="color:rgba(160,166,163,255);">
             <p>2021 Theme Moscat. All Right Reserved.</p>
           </div><!-- /.col-md-4 -->
@@ -1709,22 +1735,20 @@
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       return new bootstrap.Tooltip(tooltipTriggerEl)
     })
+
+
   </script>
 
 
 
 </body>
-<div class="side-wrapper">
+<div class="side-wrapper d-none d-lg-block" >
 
-  <div class="row ">
-    <div class="col-md-12  setting">
-      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="img/setting.png" alt=""></a>
-    </div><!-- /.col-md-12 -->
-  </div><!-- /.row -->
+
 
 
   <div class="row hidden">
-    <div class="col-md-3  " style="background-color: rgba(8,11,11,255) ; margin-left:16px;">
+        <div class="col-md-3  hidden-menu" style="background-color: rgba(8,11,11,255) ; margin-left:16px;">
       <h5 class="text-white p-3" style="background-color: rgba(0,7,8,255);">Style Switcher</h5>
       <p class="text-muted mb-0">Theme color set</p>
       <p class="text-muted mb-0">(You can create your own set easily):</p>
@@ -1943,9 +1967,11 @@
       </div>
 
     </div>
-  </div> -->
+    <div class="col-md-2  setting">
+      <a href="" onmouseenter="setting" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="img/setting.png" alt=""></a>
+    </div><!-- /.col-md-12 -->
+  </div> 
 </div>
-
 
 
 

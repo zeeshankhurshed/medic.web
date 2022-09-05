@@ -35,10 +35,10 @@ body {
 .lower-navbar-wrapper .nav-link {
     font-size: small;
     font-weight: bold;
-    
+    /* padding: 0 32px; */
 }
 .lower-navbar-wrapper .nav-item {
-    padding:0 3px;
+    padding:0 12px;
    font-size: 1rem;
     border-radius: 30px;
 
@@ -47,6 +47,11 @@ body {
 .lower-navbar-wrapper .nav-item:hover {
    
     background-color:rgba(86,99,193,255) ;
+  
+}
+.lower-navbar-wrapper .navbar-nav .nav-item .nav-link:hover {
+   color: white;
+ 
  
 }
 .lower-navbar-wrapper .psudo h4::after {
@@ -140,6 +145,7 @@ margin-top: 8px;
     width: 75px;
     height: 60px;
 }
+
 .specialization-wrapper .nav-link i {
     width: 140px;
     height: 120px;
@@ -149,8 +155,16 @@ margin-top: 8px;
     margin: 0 20px;
 
 }
-.specialization-wrapper .nav-link i:hover {
-color: rgba(86,99,193,255);
+.specialization-wrapper .nav-item :hover {
+color: rgba(86,99,193,255) !important;
+
+}
+.specialization-wrapper .nav-tabs p {
+    padding-bottom: 16px;
+}
+.specialization-wrapper .nav-tabs p:hover{
+    border-bottom: 4px solid rgba(86,99,193,255) !important;
+
 }
 .specialization-wrapper .nav-link img {
     width: 140px;
@@ -293,29 +307,27 @@ right: -220px;
 .sidebar-icons img {
     width: 50px;
     height: 50px;
-    padding: 8px;
+    padding: 16px;
    
 }
 .side-wrapper {
   position: relative;
 }
-/* .side-wrapper .setting {
-    position: fixed;
-    left: 329px;
-    top: 150px;
 
-} */
 .side-wrapper .setting:hover {
     background-color: rgba(8,11,11,255) 
   
 
 }
-/* .side-wrapper .hidden {
+.side-wrapper .hidden {
     position: fixed;
     top: 0;
     width: 101%;
+
+  transform: translateX(-350px);
 }
-   */
+
+  
 .side-wrapper a img {
     width: 80px;
     height: 80px;
@@ -324,7 +336,7 @@ right: -220px;
     padding: 20px;
     border: 2px solid transparent;
     border-radius: 8px;
-
+    transform: translate(-12px, 130px);
 }
 .side-wrapper .btn{
     padding: 24px 26px;
@@ -335,3 +347,149 @@ right: -220px;
 .side-wrapper .small {
     padding: 8px 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    header .navbar {
+        justify-content: center;
+        text-align: center;
+    }
+    .description-info .card {
+        margin-bottom: 30px;
+       }
+       .medi-cards-wrapper .sml {
+        text-align: center;
+       }
+       .emergancy-service-wrapper .sml {
+        text-align: center;
+      }
+       .emergancy-service-wrapper .btm {
+        margin-bottom: 30px;
+      }
+      .specialization-wrapper .test {
+        text-align: center;
+        padding-top: 16px;
+      }
+      .employee-info-wrapper .btm {
+        margin-bottom: 30px;
+    }
+    .employee-info-wrapper .t-cnt{
+        text-align: center;
+    }
+    .employee-info-wrapper .sml {
+        margin-bottom: 30px;
+    }
+    .price-plan-card .btm {
+        margin-bottom: 30px;
+    }
+    .facilitation-info-wrapper .facilitation {
+        text-align: center;
+
+      
+    }
+    .facilitation-info-wrapper .facilitation li {
+        
+        text-decoration: none;
+        list-style: none;
+    }
+    .facilitation-info-wrapper .form  {
+        margin-left: 24px;
+        text-align: center;
+    }
+    .facilitation-info-wrapper .form-btn {
+        display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+    }
+    .patient-related-wrapper .sml {
+        text-align: center;
+    }
+    .employee-intro-wrapper .sml {
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    .footer .scn {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .footer .sml {
+      
+        margin-bottom: 30px;
+    }
+    .bottom-navbar  .sml {
+        text-align: center;
+    }
+ }
+
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+header .navbar {
+    justify-content: center;
+}
+.carousel-caption {
+    margin: 120px;
+  } 
+  .main-carosuel-wrapper .carousel-inner .carousel-caption h1  {
+    font-size:xx-large;
+  }
+  .main-carosuel-wrapper .carousel-inner .carousel-caption h2  {
+    font-size:xx-large;
+  }
+  .description-info .card {
+   margin-bottom: 30px;
+  }
+  .emergancy-service-wrapper .btm {
+    margin-bottom: 30px;
+  }
+  .emergancy-service-wrapper .top {
+    padding: 0 !important;
+  }
+.specialization-wrapper .test {
+    margin-top: 16px;
+    text-align: center;
+}
+.employee-info-wrapper .btm {
+    margin-bottom: 30px;
+}
+.facilitation-info-wrapper .facilitation {
+    text-align: center;
+  
+}
+.facilitation-info-wrapper .facilitation li {
+    
+    text-decoration: none;
+    list-style: none;
+}
+.facilitation-info-wrapper .form  {
+    margin-left: 24px;
+}
+.footer .sml {
+    padding-bottom: 30px;
+}
+
+ }
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+  .carousel-caption {
+    margin: 100px;
+  } 
+
+ }
+
+@media (min-width: 1200px) and (max-width: 1399.98px) { 
+
+
+ }
