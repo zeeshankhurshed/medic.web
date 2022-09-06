@@ -5,13 +5,14 @@ body {
 .container{
     width: 80%;
     margin: 0 auto;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 .section-space {
     padding: 40px 0;
 }
-.upper-navbar {
+.header-inner-wrapper {
     background-color: rgba(0,163,200,255);
+   
 }
 .upper-navbar i{
     color: white;
@@ -322,11 +323,21 @@ right: -220px;
 .side-wrapper .hidden {
     position: fixed;
     top: 0;
-    width: 101%;
+    width: 30%;
+    right: 46%;
 
-  transform: translateX(-350px);
+  transform: translateX(-661px);
 }
 
+.side-wrapper .hidden .hidden-menu {
+    position: fixed;
+    width: 77%;
+    overflow-y: scroll;
+    height: 800px;
+}
+.side-wrapper .setting {
+    width: 10px;
+}
   
 .side-wrapper a img {
     width: 80px;
@@ -336,7 +347,7 @@ right: -220px;
     padding: 20px;
     border: 2px solid transparent;
     border-radius: 8px;
-    transform: translate(-12px, 130px);
+    transform: translate(-35px, 130px);
 }
 .side-wrapper .btn{
     padding: 24px 26px;

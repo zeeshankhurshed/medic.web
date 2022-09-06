@@ -7,38 +7,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="js/test.js" ></script>
+  <script src="js/test.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
- 
+
 </head>
 
 <body>
   <div class="section-site">
     <header class="header">
-       <div class="container">
-      <nav class="navbar navbar-light upper-navbar">
-       
-          <div class="contact-info">
-            <a class="navbar-brand text-white " style="margin-right: 8px;"><i class="fa fa-phone" aria-hidden="true"></i>Tel:+440-98-5298</a>
-            <a class="navbar-brand text-white"
-              style="border-left:1px solid white ; border-right:1px solid white; padding:0 16px; font-size: large;"><i
-                class="fa fa-envelope-o" aria-hidden="true"></i>info@example.com</a>
-            <a class="navbar-brand text-white"><i class="fa fa-map" aria-hidden="true"></i>121 King street,
-              Melborone</a>
-
-          </div><!-- /.contact-info -->
-
-          <div class="d-flex social-icons">
-            <a href="" class="pt-2"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-            <a href="" class="pt-2"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-            <a href="" class="pt-2"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-            <a href="#" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Make an
-              Appointment</a>
+      <div class="header-inner-wrapper">
+        <div class="container">
+          <nav class="navbar navbar-light upper-navbar">
+  
+            <div class="contact-info">
+              <a class="navbar-brand text-white " style="margin-right: 8px;"><i class="fa fa-phone"
+                  aria-hidden="true"></i>Tel:+440-98-5298</a>
+              <a class="navbar-brand text-white"
+                style="border-left:1px solid white ; border-right:1px solid white; padding:0 16px; font-size: large;"><i
+                  class="fa fa-envelope-o" aria-hidden="true"></i>info@example.com</a>
+              <a class="navbar-brand text-white"><i class="fa fa-map" aria-hidden="true"></i>121 King street,
+                Melborone</a>
+  
+            </div><!-- /.contact-info -->
+  
+            <div class="d-flex social-icons">
+              <a href="" class="pt-2"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+              <a href="" class="pt-2"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+              <a href="" class="pt-2"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+              <a href="#" class="btn btn-primary active" role="button" data-bs-toggle="modal" data-bs-target="#apointmentExampleModal">Make an
+                Appointment</a>
+            </div>
+          </nav>
+        </div>
+  
+        <!-- Modal -->
+        <div class="modal fade" id="apointmentExampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Make an Appointment</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+  
+  
+                <form class="row gy-2 gx-3 align-items-center">
+                  <div class="col-auto">
+                    <label class="visually-hidden" for="autoSizingInput">Name</label>
+                    <input type="text" class="form-control" id="autoSizingInput" placeholder="Jane Doe">
+                  </div>
+                  <div class="col-auto">
+                    <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
+                    <div class="input-group">
+                      <div class="input-group-text">@</div>
+                      <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Username">
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                    <select class="form-select" id="autoSizingSelect">
+                      <option selected>Choose...</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="col-auto">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                      <label class="form-check-label" for="autoSizingCheck">
+                        Remember me
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+  
+  
+  
+  
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
           </div>
-            </nav>
-          </div>
+        </div>
+      </div><!-- /.header-inner-wrapper -->
+   
+
+
 
       <div class="lower-navbar-wrapper py-3">
         <nav class="navbar navbar-expand-lg navbar-light ">
@@ -60,9 +123,9 @@
 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                   <li class="nav-item dropdown">
-                    <a  class="nav-link dropdown-toggle active text-white"
-                      style="display:none; background-color:rgba(86,99,193,255) ;border-radius: 30px; " href="#" id="navbarDropdown"
-                      role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle active text-white"
+                      style="display:none; background-color:rgba(86,99,193,255) ;border-radius: 30px; " href="#"
+                      id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Home
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -76,7 +139,7 @@
                   </li>
 
                   <li class="nav-item dropdown">
-                    <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                       data-bs-toggle="dropdown" aria-expanded="false">
                       Hot
                     </a>
@@ -165,8 +228,8 @@
                   </li>
 
                   <li class="nav-item " style="display:flex; justify-content: center; align-items:center;">
-                    <a href=""  data-bs-toggle="modal" data-bs-target="#staticBackdrop"  ><i class="fa fa-search text-muted"
-                        aria-hidden="true"></i></a>
+                    <a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
+                        class="fa fa-search text-muted" aria-hidden="true"></i></a>
 
                     <!-- Modal -->
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
@@ -178,51 +241,31 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                            <input type="text" class="form-control text-center pb-5" style="border: 0; font-size: xx-large;"
-                              id="exampleFormControlInput1" placeholder="Type and press Enter...">
+                            <input type="text" class="form-control text-center pb-5"
+                              style="border: 0; font-size: xx-large;" id="exampleFormControlInput1"
+                              placeholder="Type and press Enter...">
                           </div>
 
                         </div>
                       </div>
                     </div>
                   </li>
-                  <script>
-                       var toastTrigger = document.getElementById('liveToastBtn')
-                  var toastLiveExample = document.getElementById('liveToast')
-                  if (toastTrigger) {
-                    toastTrigger.addEventListener('click', function () {
-                      var toast = new bootstrap.Toast(toastLiveExample)
-                  
-                      toast.show()
-                    })
-                  }
-                  </script>
-               
+                 
+
 
                   <li class="nav-item " style="display:flex; justify-content: center; align-items:center;">
                     <div class="col-md-12" style="display:flex; justify-content: center; align-items:center;">
-                      <a href="" id="liveToastBtn" ><i class="fa fa-shopping-cart text-muted" aria-hidden="true"> </i></a>
-
-                          <!-- <button type="button" class="btn " id="liveToastBtn"><i class="fa fa-shopping-cart text-muted" aria-hidden="true"> </i></button> -->
-                          <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                              <div class="toast-header">
-                                <img src="..." class="rounded me-2" alt="...">
-                                <strong class="me-auto">Bootstrap</strong>
-                                <small>11 mins ago</small>
-                                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                              </div>
-                              <div class="toast-body">
-                                Hello, world! This is a toast message.
-                              </div>
-                            </div>
-                          </div>
-
+                      <a href="" ><i class="fa fa-shopping-cart text-muted" aria-hidden="true">
+                        </i></a>
                   </li>
 
+     
+
+
                   <li class="nav-item " style="display:flex; justify-content: center; align-items:center;">
                     <div class="col-md-12" style="display:flex; justify-content: center; align-items:center;">
-                      <a href="" data-bs-toggle="modal" data-bs-target="#eventBackdrop"><i class="fa fa-align-left text-muted" aria-hidden="true"></i></a>
+                      <a href="" data-bs-toggle="modal" data-bs-target="#eventBackdrop"><i
+                          class="fa fa-align-left text-muted" aria-hidden="true"></i></a>
                     </div><!-- /.col-md-12 -->
 
 
@@ -233,102 +276,107 @@
                       <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title" id="eventBackdropLabel"> <a class="navbar-brand " href="#"  style="margin-top: 20px;"><img src="img/logo.png" alt="" style="width:50px ;position: relative;"> <b
-                              style="font-size:20px;position: absolute; top: 24px;  ">MEDINOVA</b> <br><span
-                              style="font-weight:lighter; font-size:small; position: absolute;left: 272px; top: 48px; "></a></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="margin-top: -80px;"></button>
+                            <h5 class="modal-title" id="eventBackdropLabel"> <a class="navbar-brand " href="#"
+                                style="margin-top: 20px;"><img src="img/logo.png" alt=""
+                                  style="width:50px ;position: relative;"> <b
+                                  style="font-size:20px;position: absolute; top: 24px;  ">MEDINOVA</b> <br><span
+                                  style="font-weight:lighter; font-size:small; position: absolute;left: 272px; top: 48px; "></a>
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                              style="margin-top: -80px;"></button>
                           </div>
-                          <p style="margin: 0 24px; font-size:small;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br>Fugit sint porro  Repellendus.</p>
+                          <p style="margin: 0 24px; font-size:small;">Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. <br>Fugit sint porro Repellendus.</p>
 
-                          <footer class="footer psudo" >
-                            
-                              <div class="row  pt-4" >
-                                
-                      
-                                <div class="col-md-6 "style="margin: 0 24px; font-size:small;">
-                                  <h4  >Latest News</h4>
-                                  <hr>
-                                  <div class="row doctor">
-                                    <div class="col-md-4">
-                                      <img src="img/card 1.png" alt="">
-                                    </div><!-- /.col-md-6 -->
-                                    <div class="col-md-6">
-                                      <p >Sustainable</p>
-                                      <p >Construction</p>
-                                     
-                                    </div><!-- /.col-md-6 -->
-                      
-                                    <div class="col-md-4 pt-3">
-                                      <img src="img/card 1.png" alt="">
-                                    </div><!-- /.col-md-6 -->
-                                    <div class="col-md-6 pt-4">
-                                      <p >Sustainable</p>
-                      
-                                      <p >April 15, 2021</p>
-                                    </div><!-- /.col-md-6 -->
-                      
-                                    <div class="col-md-4 pt-3">
-                                      <img src="img/card 1.png" alt="">
-                                    </div><!-- /.col-md-6 -->
-                                    <div class="col-md-6 pt-4">
-                                      <p >Sustainable</p>
-                      
-                                      <p >April 15, 2021</p>
-                                    </div><!-- /.col-md-6 -->
-                                  </div><!-- /.row -->
-                                </div><!-- /.col-md-3 -->
-                      
-                      
-                          </footer>
+                          <footer class="footer psudo">
 
-                          <footer class="footer psudo" >
-                            
-                            <div class="row py-4" >
-                              
-                    
-                              <div class="col-md-6 "style="margin: 0 24px; font-size:small;">
-                                <h4 >Contact Info</h4>
+                            <div class="row  pt-4">
+
+
+                              <div class="col-md-6 " style="margin: 0 24px; font-size:small;">
+                                <h4>Latest News</h4>
                                 <hr>
-                                <div class="row doctor" >
-                                  <div class="col-md-4 ">
-                                    <i class="fa fa-user-md "  aria-hidden="true" style="font-size: 32px;" ></i>
-                                  </div><!-- /.col-md-6 -->
-                                  <div class="col-md-6 text-muted">
-                                    <p >John Doe</p>
-                                   
-                                  </div><!-- /.col-md-6 -->
-                    
+                                <div class="row doctor">
                                   <div class="col-md-4">
-                                    <i class="fa fa-user-md" aria-hidden="true" style="font-size: 32px;"></i>
+                                    <img src="img/card 1.png" alt="">
                                   </div><!-- /.col-md-6 -->
-                                  <div class="col-md-6 text-muted">
-                                    <p >+51 925 925 125</p>
-                                   
-                                  </div><!-- /.col-md-6 -->
-                    
-                                  <div class="col-md-4">
-                                    <i class="fa fa-user-md" aria-hidden="true" style="font-size: 32px;"></i>
-                                  </div><!-- /.col-md-6 -->
-                                  <div class="col-md-6 text-muted">
-                                    <p >@gmail.com</p>
-                                   
+                                  <div class="col-md-6">
+                                    <p>Sustainable</p>
+                                    <p>Construction</p>
+
                                   </div><!-- /.col-md-6 -->
 
-                                  <div class="col-md-4">
-                                    <i class="fa fa-user-md" aria-hidden="true" style="font-size: 32px;"></i>
+                                  <div class="col-md-4 pt-3">
+                                    <img src="img/card 1.png" alt="">
                                   </div><!-- /.col-md-6 -->
-                                  <div class="col-md-6 text-muted" >
-                                    <p >Bank flofward london</p>
-                                   
+                                  <div class="col-md-6 pt-4">
+                                    <p>Sustainable</p>
+
+                                    <p>April 15, 2021</p>
                                   </div><!-- /.col-md-6 -->
 
-                                
+                                  <div class="col-md-4 pt-3">
+                                    <img src="img/card 1.png" alt="">
+                                  </div><!-- /.col-md-6 -->
+                                  <div class="col-md-6 pt-4">
+                                    <p>Sustainable</p>
+
+                                    <p>April 15, 2021</p>
+                                  </div><!-- /.col-md-6 -->
                                 </div><!-- /.row -->
                               </div><!-- /.col-md-3 -->
-                   
-                        </footer>
 
-                        
+
+                          </footer>
+
+                          <footer class="footer psudo">
+
+                            <div class="row py-4">
+
+
+                              <div class="col-md-6 " style="margin: 0 24px; font-size:small;">
+                                <h4>Contact Info</h4>
+                                <hr>
+                                <div class="row doctor">
+                                  <div class="col-md-4 ">
+                                    <i class="fa fa-user-md " aria-hidden="true" style="font-size: 32px;"></i>
+                                  </div><!-- /.col-md-6 -->
+                                  <div class="col-md-6 text-muted">
+                                    <p>John Doe</p>
+
+                                  </div><!-- /.col-md-6 -->
+
+                                  <div class="col-md-4">
+                                    <i class="fa fa-user-md" aria-hidden="true" style="font-size: 32px;"></i>
+                                  </div><!-- /.col-md-6 -->
+                                  <div class="col-md-6 text-muted">
+                                    <p>+51 925 925 125</p>
+
+                                  </div><!-- /.col-md-6 -->
+
+                                  <div class="col-md-4">
+                                    <i class="fa fa-user-md" aria-hidden="true" style="font-size: 32px;"></i>
+                                  </div><!-- /.col-md-6 -->
+                                  <div class="col-md-6 text-muted">
+                                    <p>@gmail.com</p>
+
+                                  </div><!-- /.col-md-6 -->
+
+                                  <div class="col-md-4">
+                                    <i class="fa fa-user-md" aria-hidden="true" style="font-size: 32px;"></i>
+                                  </div><!-- /.col-md-6 -->
+                                  <div class="col-md-6 text-muted">
+                                    <p>Bank flofward london</p>
+
+                                  </div><!-- /.col-md-6 -->
+
+
+                                </div><!-- /.row -->
+                              </div><!-- /.col-md-3 -->
+
+                          </footer>
+
+
                         </div>
                       </div>
                     </div>
@@ -342,19 +390,21 @@
 
       </div><!-- /.lower-navbar-wrapper -->
 
-      
+
     </header>
 
     <main>
       <div class="main-carosuel-wrapper">
         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active d-none d-md-block d-lg-block "
-              aria-current="true" aria-label="Slide 1"
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+              class="active d-none d-md-block d-lg-block " aria-current="true" aria-label="Slide 1"
               style="height:20px; width: 20px; border-radius:50%; background-color: white; border:3px solid white;"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"  class=" d-none d-md-block d-lg-block" aria-label="Slide 2"
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+              class=" d-none d-md-block d-lg-block" aria-label="Slide 2"
               style="height:20px; width: 20px; border-radius:50%; background-color: white; border:3px solid white;"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"  class=" d-none d-md-block d-lg-block" aria-label="Slide 3"
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+              class=" d-none d-md-block d-lg-block" aria-label="Slide 3"
               style="height:20px; width: 20px; border-radius:50%; background-color: white; border:3px solid white;"></button>
           </div>
           <div class="carousel-inner">
@@ -688,7 +738,7 @@
               <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
                 role="tab" aria-controls="home" aria-selected="true"><i class="fa fa-tint"
                   aria-hidden="true"></i></button>
-              <p class="text-center text-muted" >Blood Test</p>
+              <p class="text-center text-muted">Blood Test</p>
             </li>
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
@@ -1385,11 +1435,13 @@
                   aria-label="Enter Message" rows="3"></textarea>
               </div>
               <div class="col-md-6 form-btn">
-                <a href=""  class="btn btn-primary " style="padding: 12px 32px;
+                <a href="" class="btn btn-primary " style="padding: 12px 32px;
                 border: 0; border-radius: 0;" disabled>Send Your Message</a>
-                <a href=""  class="btn  mt-3" style="background-color: rgba(255,101,1,255); padding: 12px 32px; border: 0; border-radius: 0;" disabled>Reset</a>
+                <a href="" class="btn  mt-3"
+                  style="background-color: rgba(255,101,1,255); padding: 12px 32px; border: 0; border-radius: 0;"
+                  disabled>Reset</a>
               </div>
-              
+
             </div>
           </div><!-- /.col-md-4 -->
         </div> <!-- /.row -->
@@ -1551,25 +1603,30 @@
           <div class="col-md-6 col-lg-3 text-white sml">
             <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""> <span class="text-white">MEDINOVA</span>
             </a>
-            <p class="pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, modi! Ut cumque reprehenderit magni, nulla</p>
+            <p class="pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, modi! Ut cumque reprehenderit
+              magni, nulla</p>
             <div class="row">
               <div class="col-md-2">
-                <i class="fa fa-facebook-square" aria-hidden="true" style="font-size: xx-large; color:rgba(6,132,160,255);"></i>
+                <i class="fa fa-facebook-square" aria-hidden="true"
+                  style="font-size: xx-large; color:rgba(6,132,160,255);"></i>
               </div><!-- /.col-md-3 -->
               <div class="col-md-2">
-                <i class="fa fa-twitter-square" aria-hidden="true" style="font-size: xx-large; color:rgba(6,132,160,255);"></i>
+                <i class="fa fa-twitter-square" aria-hidden="true"
+                  style="font-size: xx-large; color:rgba(6,132,160,255);"></i>
               </div><!-- /.col-md-3 -->
               <div class="col-md-2">
-              <i class="fa fa-youtube-play" aria-hidden="true" style="font-size: xx-large; color:rgba(6,132,160,255);"></i>
+                <i class="fa fa-youtube-play" aria-hidden="true"
+                  style="font-size: xx-large; color:rgba(6,132,160,255);"></i>
               </div><!-- /.col-md-3 -->
               <div class="col-md-2">
-                <i class="fa fa-instagram" aria-hidden="true" style="font-size: xx-large; color:rgba(6,132,160,255);"></i>
+                <i class="fa fa-instagram" aria-hidden="true"
+                  style="font-size: xx-large; color:rgba(6,132,160,255);"></i>
               </div><!-- /.col-md-3 -->
 
             </div><!-- /.row -->
-            
-            
-            
+
+
+
           </div><!-- /.col-md-3 -->
 
           <div class="col-md-6 col-lg-3 text-white sml">
@@ -1670,9 +1727,9 @@
             <p>Friday - Saturday: 10:00am - 6.00pm</p>
             <hr>
             Sunday: Closed
-            </div>
           </div>
-          </div><!-- /.container -->
+        </div>
+      </div><!-- /.container -->
 
     </footer>
 
@@ -1701,11 +1758,11 @@
   <div class="sidebar-icons">
     <div class="row images bg-white">
       <div class="col-12 ">
-    
+
         <a href="" data-bs-toggle="tooltip" data-bs-placement="top" title="By HTML">
           <img src="img/carts.png" alt="">
         </a>
-        
+
       </div><!-- /.col-12 -->
       <div class="col-12">
         <!-- <a href=""><img src="img/w.jpg" alt=""></a> -->
@@ -1735,20 +1792,14 @@
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       return new bootstrap.Tooltip(tooltipTriggerEl)
     })
-
-
   </script>
 
 
 
 </body>
-<div class="side-wrapper d-none d-lg-block" >
-
-
-
-
+<div class="side-wrapper d-none d-lg-block">
   <div class="row hidden">
-        <div class="col-md-3  hidden-menu" style="background-color: rgba(8,11,11,255) ; margin-left:16px;">
+    <div class="col-md-3  hidden-menu" id="box" style="background-color: rgba(8,11,11,255) ; margin-left:16px; position: relative; transform: translateX(0px);">
       <h5 class="text-white p-3" style="background-color: rgba(0,7,8,255);">Style Switcher</h5>
       <p class="text-muted mb-0">Theme color set</p>
       <p class="text-muted mb-0">(You can create your own set easily):</p>
@@ -1968,9 +2019,11 @@
 
     </div>
     <div class="col-md-2  setting">
-      <a href="" onmouseenter="setting" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="img/setting.png" alt=""></a>
+      <a href="#" onclick="show()" ondbclick="hide()" data-bs-toggle="modal" data-bs-target="#exampleModal"
+      style="position: absolute;right: -36px; top: 61px;"><img src="img/setting.png"
+          alt=""></a>
     </div><!-- /.col-md-12 -->
-  </div> 
+  </div>
 </div>
 
 
