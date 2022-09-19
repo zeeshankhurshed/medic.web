@@ -900,27 +900,15 @@ body {
 .brand-product-wrapper .card {
     box-shadow: 6px 6px 20px 10px rgb(247, 241, 241);
     position: relative;
+    transition: all 2s ease-in-out;
 }
-/* .brand-product-wrapper .card:hover {
-    background-color:  rgb(247, 241, 241);
-    opacity: 1;
-    transition: all .3s ease-in-out;
-} */
+
 .brand-product-wrapper .card-img-top{
     display: block;
+
 }
-/* .brand-product-wrapper .card-img-top2{
-    display: none;
-}
-.brand-product-wrapper .card-img-top:hover{
-    display: none;
-}
-.brand-product-wrapper .card-img-top2:hover{
-    display: block;
-} */
-/* .brand-product-wrapper .card-img-top:hover{
-    display: none;
-} */
+
+
 
 .brand-product-wrapper  .icon {
     position: absolute;
@@ -931,14 +919,19 @@ body {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: .3s ;
-    
-  
-
+    transition:all 1s ;
+    /* animation-name: sapmple; */
 }
+/* @keyframes sample {
+    0% {display: none;}
+    25% {padding-bottom: 16px;}
+    50% {padding-bottom: 32px;}
+    75% {padding-bottom: 48px;}
+    100% {padding-bottom: 64px;}
+} */
 .brand-product-wrapper  .icon:hover {
     opacity: 1 ;
-    transition-duration: .3s;
+
 
 }
 .brand-product-wrapper .icon img {
